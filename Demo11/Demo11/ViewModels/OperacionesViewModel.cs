@@ -74,9 +74,23 @@ namespace Demo11.ViewModels
                 }
             }
         }
+        int resultadoD;
+        public int ResultadoD
+        {
+            get { return resultadoD; }
+            set
+            {
+                if (resultadoD != value)
+                {
+                    resultadoD = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
         public ICommand Sumar { get; set; }
         public ICommand Restar { get; set; }
         public ICommand Multiplicar { get; set; }
+        public ICommand Dividir { get; set; }
 
         public OperacionesViewModel() 
         {
@@ -91,6 +105,10 @@ namespace Demo11.ViewModels
             Multiplicar = new Command(() =>
             {
                 ResultadoM = ValorA * ValorB;
+            });
+            Dividir = new Command(() =>
+            {
+                ResultadoD = ValorA / ValorB;
             });
         }
     }

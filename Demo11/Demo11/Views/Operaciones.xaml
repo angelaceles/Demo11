@@ -14,10 +14,12 @@
             <Button Text="Sumar" Command="{Binding Sumar}"/>
             <Button Text="Restar" Command="{Binding Restar}"/>
             <Button Text="Multiplicar" Command="{Binding Multiplicar}"/>
+            <Button Text="Dividir" Command="{Binding Dividir}"/>
 
             <Label Text="{Binding ResultadoS}" FontSize="50"/>
             <Label Text="{Binding ResultadoR}" FontSize="50"/>
             <Label Text="{Binding ResultadoM}" FontSize="50"/>
+            <Label Text="{Binding ResultadoD}" FontSize="50"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
